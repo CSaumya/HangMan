@@ -1,73 +1,107 @@
-# React + TypeScript + Vite
+# 🎮 Hangman Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A classic **Hangman word-guessing game** built with React, TypeScript, and Tailwind CSS. Guess the hidden word one letter at a time before you run out of attempts!
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- ⌨️ Interactive on-screen keyboard
+- 🖥️ Physical keyboard support for guessing letters
+- 🎨 Visual hangman drawing that updates with incorrect guesses
+- 🟢 Correct guesses and 🔴 incorrect guesses are highlighted
+- 🏆 Win and lose detection
+- 👀 Automatically reveals the correct word when you lose
+- 📱 Responsive layout with Tailwind CSS
 
-## React Compiler
+## 🛠️ Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **React** — UI development
+- **TypeScript** — Type safety
+- **Tailwind CSS** — Styling and responsive layouts
+- **Vite** — Development server and build tool
 
-## Expanding the ESLint configuration
+## 🚀 Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Prerequisites
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Make sure you have [Node.js](https://nodejs.org/) and npm installed.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Installation
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+1. Clone the repository:
+
+   ```bash
+   git clone <your-repository-url>
+   ```
+
+2. Navigate to the project directory:
+
+   ```bash
+   cd hangman
+   ```
+
+3. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+4. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+5. Open the local URL displayed in your terminal.
+
+## 🎮 How to Play
+
+1. A random word is selected, and its letters are hidden.
+2. Guess letters using the on-screen keyboard or your physical keyboard.
+3. Correct guesses reveal the matching letters.
+4. Incorrect guesses add a new part to the hangman drawing.
+5. Reveal the entire word by guessing correctly before reaching six incorrect guesses.
+6. If you run out of attempts, the game reveals the word.
+
+
+
+## 📂 Project Structure
+
+```text
+src/
+├── components/
+│   ├── HangmanDrawing.tsx
+│   ├── HangmanWord.tsx
+│   └── Keyboard.tsx
+├── wordList.json
+├── App.tsx
+├── main.tsx
+└── index.css
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+*Your exact folder structure may vary depending on your setup.*
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 📚 What I Learned
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- Building reusable React components with TypeScript
+- Managing game state using React hooks
+- Handling keyboard and click events
+- Implementing conditional rendering
+- Styling interactive components with Tailwind CSS
+- Managing win/loss conditions and dynamic UI updates
+
+## 🔮 Future Improvements
+
+- Add a restart button to start a new round without refreshing
+- Add difficulty levels
+- Track scores and consecutive wins
+- Add hints for difficult words
+- Include sound effects and animations
+
+## 👩‍💻 Author
+
+**Saumya Chaudhary**
+
+
+---
+
+If you enjoyed this project, consider giving the repository a ⭐!

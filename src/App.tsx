@@ -6,7 +6,7 @@ import { Keyboard } from './components/Keyboard'
 
 
 const App = () => {
-  const [ wordToGuess, setWordToGuess ] = useState(() => {
+  const [ wordToGuess ] = useState(() => {
     return words[Math.floor(Math.random() * words.length)]
   })
   

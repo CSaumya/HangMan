@@ -4,9 +4,8 @@ import { HangmanDrawing } from './components/HangmanDrawing'
 import { HangmanWord } from './components/HangmanWord'
 import { Keyboard } from './components/Keyboard'
 
-type Props = {}
 
-const App = (props: Props) => {
+const App = () => {
   const [ wordToGuess, setWordToGuess ] = useState(() => {
     return words[Math.floor(Math.random() * words.length)]
   })
